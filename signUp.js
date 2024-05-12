@@ -34,7 +34,7 @@ async function signUp(username, password) {
         });
 
         console.log("User has been created");
-        window.location.href = "login.html"
+        window.location.href = "index.html"
     } catch (error) {
         console.log("Error creating user", error);
     }
