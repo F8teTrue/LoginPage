@@ -40,3 +40,14 @@ button:hover {
 p {
     margin-top: 20px;
 }
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#togglePassword {
+    width: 20px;
+    height: 20px;
+}

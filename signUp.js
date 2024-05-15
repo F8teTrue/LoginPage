@@ -1,3 +1,5 @@
+const { doc } = require("firebase/firestore");
+
 const firebaseConfig = {
     apiKey: "AIzaSyBATT-7pmmb-O7E5e1D-KczrBOSvc75at0",
     authDomain: "loginpage-93a16.firebaseapp.com",
@@ -47,4 +49,13 @@ document.getElementById("signUpForm").addEventListener("submit", async (event) =
     const password = document.getElementById("password").value;
 
     await signUp(username, password);
+});
+
+document.getElementById("togglePassword").addEventListener("change", function() {
+    const passwordInput = document.getElementById("password")
+    if (passwordInput.type === "password") {
+        passwordInput.type = "text"
+    } else {
+        passwordInput.type = "password"
+    }
 });

@@ -38,5 +38,14 @@ document.getElementById("loginForm").addEventListener("submit", async (event) =>
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
 
-    await login(username, password)
+    await login(username, password);
+});
+
+document.getElementById("togglePassword").addEventListener("change", function() {
+    const passwordInput = document.getElementById("password")
+    if (passwordInput.type === "password") {
+        passwordInput.type = "text"
+    } else {
+        passwordInput.type = "password"
+    }
 });
